@@ -1,7 +1,7 @@
-const Page2 = () => {
+const Page2 = ({ handleSubmit }) => {
   return (
     <div>
-      <form action="">
+      <form onSubmit={handleSubmit}>
         <input type="text" name="name" placeholder="John Doe" required />
         <input
           type="email"

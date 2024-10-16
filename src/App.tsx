@@ -1,8 +1,30 @@
 import { useState } from "react";
 import "./App.css";
 import Page1 from "./components/pages/Page1";
+import { DataType } from "./types/DataType";
+import Page2 from "./components/pages/Page2";
 
-function App() {
+type FormProps = {
+  formData: DataType[];
+  setFormData: (formData: DataType[]) => void;
+};
+
+function App({ formData, setFormData }: FormProps) {
+  const [credential, setCredential] = useState<DataType>({
+    account: true,
+    name: "",
+    email: "",
+    password: "",
+    age: 0,
+    interest: "",
+    description: "",
+  });
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setFormData([...formData, credential]);
+  };
+
   const [currentPage, setCurrentPage] = useState(1);
 
   const nextPage = () => {
@@ -22,7 +44,7 @@ function App() {
 
         {currentPage === 2 && (
           <div>
-            <h2>Page 2</h2>
+            <Page2 handleSubmit={handleSubmit} />
           </div>
         )}
 
@@ -32,7 +54,14 @@ function App() {
           </div>
         )}
       </main>
-      <button onClick={nextPage}>Page suivante</button>
+
+      {currentPage === 1 || currentPage === 2 ? (
+        <button onClick={nextPage}>Page suivante</button>
+      ) : (
+        <button onClick={handleSubmit} type="submit">
+          Send
+        </button>
+      )}
     </>
   );
 }
