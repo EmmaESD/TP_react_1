@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./App.css";
+import Page1 from "./components/pages/Page1";
 
 function App() {
   const [currentPage, setCurrentPage] = useState(1);
@@ -17,24 +18,17 @@ function App() {
   return (
     <>
       <main>
-        {currentPage === 1 && (
-          <div>
-            <h2>Page 1</h2>
-            <p>1.</p>
-          </div>
-        )}
+        {currentPage === 1 && <Page1 />}
 
         {currentPage === 2 && (
           <div>
             <h2>Page 2</h2>
-            <p>2</p>
           </div>
         )}
 
         {currentPage === 3 && (
           <div>
             <h2>Page 3</h2>
-            <p>3</p>
           </div>
         )}
       </main>
