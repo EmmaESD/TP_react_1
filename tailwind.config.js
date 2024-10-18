@@ -7,6 +7,10 @@ export default {
         sans: ["Poppins", "sans-serif"], // Ajoute ta police personnalisée ici
       },
     },
+    borderWidth: {
+      0.5: "0.5px",
+      1.5: "1.5px",
+    },
   },
   plugins: [],
 };
