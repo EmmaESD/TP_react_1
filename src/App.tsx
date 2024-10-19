@@ -3,6 +3,7 @@ import "./App.css";
 import Page1 from "./components/pages/Page1";
 import { DataType } from "./types/DataType";
 import Page2 from "./components/pages/Page2";
+import Page3 from "./components/pages/page3";
 
 type FormProps = {
   formData: DataType[];
@@ -52,14 +53,13 @@ function App({ formData, setFormData }: FormProps) {
             </p>
           </section>
           <section className="w-full px-16 bg-[url('./assets/bg-line.png')] bg-center bg-no-repeat">
-            {/* ajouter une fonction qui change le bg-color et bg-text du cercle en fonction de la page et mettre un component status */}
             <div className="flex justify-between w-full">
               <div
                 className={`${
                   currentPage === 1
                     ? "bg-colorPurple text-colorWhite"
                     : "bg-colorWhite text-colorGrey"
-                } rounded-full border-solid border-0.5 text-colorWhite w-8 h-8 flex items-center justify-center`}
+                } rounded-full border-solid border-0.5 w-8 h-8 flex items-center justify-center`}
               >
                 1
               </div>
@@ -92,13 +92,8 @@ function App({ formData, setFormData }: FormProps) {
               <Page2 handleSubmit={handleSubmit} />
             </div>
           )}
+          {currentPage === 3 && <Page3 handleSubmit={handleSubmit} />}
         </div>
-
-        {currentPage === 3 && (
-          <div>
-            <h2>Page 3</h2>
-          </div>
-        )}
 
         <div className="w-full flex justify-end">
           {currentPage === 1 && (
