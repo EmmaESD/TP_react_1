@@ -11,6 +11,13 @@ export default {
       0.5: "0.5px",
       1.5: "1.5px",
     },
+    colors: {
+      colorWhite: "#FEFEFE",
+      colorGrey: "#D4D4D8",
+      colorBlack: "#27272A",
+      colorPurple: "#B991FF",
+      colorHover: "ECECF0",
+    },
   },
   plugins: [],
 };

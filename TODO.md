@@ -8,7 +8,9 @@ TO DO PROJECT :
 
 [ ] create style of finish page
 
-[ ] create status bar function and put into component file
+[x] create status bar function
+
+[ ] put status bar into component file
 
 [ ] create choice account button with function
 

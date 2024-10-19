@@ -39,24 +39,44 @@ function App({ formData, setFormData }: FormProps) {
 
   return (
     <div className="font-custom bg-[url('./assets/bg-img.png')] bg-cover w-full p-0 py-40 flex justify-center items-center">
-      <main className="bg-white p-8">
+      <main className="bg-colorWhite p-8 flex flex-col gap-16">
         <header className="flex flex-col justify-center items-center gap-8">
           <section className="flex flex-col justify-center items-center gap-4">
-            <h1 className="text-3xl font-semibold">Registration Form</h1>
-            <p className="text-sm text-zinc-300 ">
+            <h1 className="text-3xl text-colorBlack font-semibold">
+              Registration Form
+            </h1>
+            <p className="text-sm text-colorGrey ">
               Please fill out this form with the required information
             </p>
           </section>
           <section className="w-full px-16 bg-[url('./assets/bg-line.png')] bg-center bg-no-repeat">
             {/* ajouter une fonction qui change le bg-color et bg-text du cercle en fonction de la page et mettre un component status */}
             <div className="flex justify-between w-full">
-              <div className="text-zinc-300 bg-white rounded-full border-solid border-0.5 border-zinc-300 w-8 h-8 flex items-center justify-center">
+              <div
+                className={`${
+                  currentPage === 1
+                    ? "bg-colorPurple text-colorWhite"
+                    : "bg-colorWhite text-colorGrey"
+                } rounded-full border-solid border-0.5 text-colorWhite w-8 h-8 flex items-center justify-center`}
+              >
                 1
               </div>
-              <div className=" text-zinc-300 bg-white rounded-full border-solid border-0.5 border-zinc-300 w-8 h-8 flex items-center justify-center">
+              <div
+                className={`${
+                  currentPage === 2
+                    ? "bg-colorPurple text-colorWhite"
+                    : "bg-colorWhite text-colorGrey"
+                } rounded-full border-solid border-0.5 w-8 h-8 flex items-center justify-center`}
+              >
                 2
               </div>
-              <div className="text-zinc-300 bg-white rounded-full border-solid border-0.5 border-zinc-300 w-8 h-8 flex items-center justify-center">
+              <div
+                className={`${
+                  currentPage === 3
+                    ? "bg-colorPurple text-colorWhite"
+                    : "bg-colorWhite text-colorGrey"
+                } rounded-full border-solid border-0.5 w-8 h-8 flex items-center justify-center`}
+              >
                 3
               </div>
             </div>
