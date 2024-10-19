@@ -29,17 +29,19 @@ function App({ formData, setFormData }: FormProps) {
 
   const nextPage = () => {
     setCurrentPage((prevPage) => {
-      if (prevPage === 3) {
-        return 1;
-      } else {
-        return prevPage + 1;
-      }
+      return prevPage + 1;
+    });
+  };
+
+  const previousPage = () => {
+    setCurrentPage((prevPage) => {
+      return prevPage - 1;
     });
   };
 
   return (
     <div className="font-custom bg-[url('./assets/bg-img.png')] bg-cover w-full p-0 py-40 flex justify-center items-center">
-      <main className="bg-colorWhite p-8 flex flex-col gap-16">
+      <main className="bg-colorWhite p-8 flex flex-col gap-16 rounded-md">
         <header className="flex flex-col justify-center items-center gap-8">
           <section className="flex flex-col justify-center items-center gap-4">
             <h1 className="text-3xl text-colorBlack font-semibold">
@@ -82,13 +84,15 @@ function App({ formData, setFormData }: FormProps) {
             </div>
           </section>
         </header>
-        {currentPage === 1 && <Page1 />}
+        <div>
+          {currentPage === 1 && <Page1 />}
 
-        {currentPage === 2 && (
-          <div>
-            <Page2 handleSubmit={handleSubmit} />
-          </div>
-        )}
+          {currentPage === 2 && (
+            <div>
+              <Page2 handleSubmit={handleSubmit} />
+            </div>
+          )}
+        </div>
 
         {currentPage === 3 && (
           <div>
@@ -96,13 +100,49 @@ function App({ formData, setFormData }: FormProps) {
           </div>
         )}
 
-        {currentPage === 1 || currentPage === 2 ? (
-          <button onClick={nextPage}>Page suivante</button>
-        ) : (
-          <button onClick={handleSubmit} type="submit">
-            Send
-          </button>
-        )}
+        <div className="w-full flex justify-end">
+          {currentPage === 1 && (
+            <button
+              onClick={nextPage}
+              className="bg-colorPurple text-colorWhite w-fit px-3 py-2 text-sm rounded-sm"
+            >
+              Next
+            </button>
+          )}
+          {currentPage === 2 && (
+            <div className="flex justify-end gap-3 w-full">
+              <button
+                onClick={previousPage}
+                className=" text-colorGrey w-fit px-3 py-2 text-sm rounded-sm"
+              >
+                Previous
+              </button>
+              <button
+                onClick={nextPage}
+                className="bg-colorPurple text-colorWhite w-fit px-3 py-2 text-sm rounded-sm"
+              >
+                Next
+              </button>
+            </div>
+          )}
+          {currentPage === 3 && (
+            <div className="flex justify-end gap-3 w-full">
+              <button
+                onClick={previousPage}
+                className=" text-colorGrey w-fit px-3 py-2 text-sm rounded-sm"
+              >
+                Previous
+              </button>
+              <button
+                onClick={handleSubmit}
+                type="submit"
+                className="bg-colorPurple text-colorWhite w-fit px-3 py-2 text-sm rounded-sm"
+              >
+                Send
+              </button>
+            </div>
+          )}
+        </div>
       </main>
     </div>
   );
