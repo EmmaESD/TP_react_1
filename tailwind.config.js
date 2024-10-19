@@ -16,7 +16,7 @@ export default {
       colorGrey: "#D4D4D8",
       colorBlack: "#27272A",
       colorPurple: "#B991FF",
-      colorHover: "ECECF0",
+      colorHover: "#F4F4F5",
     },
   },
   plugins: [],
