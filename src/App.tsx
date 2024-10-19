@@ -4,6 +4,8 @@ import Page1 from "./components/pages/Page1";
 import { DataType } from "./types/DataType";
 import Page2 from "./components/pages/Page2";
 import Page3 from "./components/pages/page3";
+import ButtonNext from "./components/ui/ButtonNext";
+import ButtonPrevious from "./components/ui/ButtonPrevious";
 
 type FormProps = {
   formData: DataType[];
@@ -96,38 +98,17 @@ function App({ formData, setFormData }: FormProps) {
         </div>
 
         <div className="w-full flex justify-end">
-          {currentPage === 1 && (
-            <button
-              onClick={nextPage}
-              className="bg-colorPurple text-colorWhite w-fit px-3 py-2 text-sm rounded-sm"
-            >
-              Next
-            </button>
-          )}
+          {currentPage === 1 && <ButtonNext nextPage={nextPage} />}
           {currentPage === 2 && (
             <div className="flex justify-end gap-3 w-full">
-              <button
-                onClick={previousPage}
-                className=" text-colorGrey w-fit px-3 py-2 text-sm rounded-sm"
-              >
-                Previous
-              </button>
-              <button
-                onClick={nextPage}
-                className="bg-colorPurple text-colorWhite w-fit px-3 py-2 text-sm rounded-sm"
-              >
-                Next
-              </button>
+              <ButtonPrevious previousPage={previousPage} />
+              <ButtonNext nextPage={nextPage} />
             </div>
           )}
           {currentPage === 3 && (
             <div className="flex justify-end gap-3 w-full">
-              <button
-                onClick={previousPage}
-                className=" text-colorGrey w-fit px-3 py-2 text-sm rounded-sm"
-              >
-                Previous
-              </button>
+              <ButtonPrevious previousPage={previousPage} />
+
               <button
                 onClick={handleSubmit}
                 type="submit"
