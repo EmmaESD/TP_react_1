@@ -6,7 +6,7 @@ type Page4Props = {
   setFormData: (formData: DataType[]) => void;
 };
 
-const Page4 = ({ credential, formData, setFormData }: Page4Props) => {
+const Page4 = ({ credential, formData }: Page4Props) => {
   console.log("formData:", formData);
 
   return (
