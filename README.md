@@ -16,11 +16,11 @@ This project is a graded assignment completed as part of my studies. It is an in
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/repository-name.git
+   git clone https://github.com/EmmaESD/TP_react_1.git
    
 2. Navigate to the project folder:
    ```bash
-    cd repository-name
+    cd TP_React_1
    ```
 
 4. Install the dependencies :
