@@ -19,9 +19,9 @@ This project is a graded assignment completed as part of my studies. It is an in
    git clone https://github.com/your-username/repository-name.git
    
 2. Navigate to the project folder:
-  ```bash
- cd repository-name
-```
+   ```bash
+    cd repository-name
+   ```
 
 4. Install the dependencies :
    ```bash
