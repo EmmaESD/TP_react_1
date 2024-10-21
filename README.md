@@ -19,13 +19,19 @@ This project is a graded assignment completed as part of my studies. It is an in
    git clone https://github.com/your-username/repository-name.git
    
 2. Navigate to the project folder:
-  `` cd repository-name ``
+  ```bash
+ cd repository-name
+```
 
-3. Install the dependencies :
-   ``npm install``
+4. Install the dependencies :
+   ```bash
+      npm install
+   ```
 
-4. Start the application in development mode:
-   ``npm run dev``
+5. Start the application in development mode:
+   ```bash
+      npm run dev
+   ```
 
 # Technologies Used
 - React: for managing the interface and application logic.
