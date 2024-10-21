@@ -1,50 +1,32 @@
-# React + TypeScript + Vite
+# React Form with Tailwind
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a graded assignment completed as part of my studies. It is an interactive form built with React and styled using Tailwind CSS. The goal of this project is to manipulate certain React functions, such as state management, event handling, and using hooks.
 
-Currently, two official plugins are available:
+## Features
+- Interactive form
+- Field validation
+- State management with React
+- Styling with Tailwind CSS
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Requirements
+- Node.js (version 14 or higher)
+- npm (or yarn)
 
-## Expanding the ESLint configuration
+## Installation and Running
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/repository-name.git
+   
+2. Navigate to the project folder:
+  `` cd repository-name ``
 
-- Configure the top-level `parserOptions` property like this:
+3. Install the dependencies :
+   ``npm install``
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+4. Start the application in development mode:
+   ``npm run dev``
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+# Technologies Used
+- React: for managing the interface and application logic.
+- Tailwind CSS: for component styling.
